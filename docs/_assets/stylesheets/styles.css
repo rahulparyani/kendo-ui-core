@@ -1,20 +1,9 @@
 body,
-html,
-#page-tabs,
-#page-tabs li,
-#markdown-toc ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-}
-
-body,
 html {
     min-height: 100%;
-}
-
-html {
-    padding-top: 79px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -51,16 +40,81 @@ em {
     font-family: "Roboto Mono", "Ubuntu Mono", "Consolas", "Monaco", monospace;
 }
 
+.TK-Hat {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #eff0f1;
+    color: #4d4f52;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.TK-Hat::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.TK-Hat *,
+.TK-Hat:after,
+.TK-Hat:before {
+    box-sizing: border-box;
+}
+
+.TK-Hat-Brand {
+    float: left;
+    width: 150px;
+    margin: 0;
+}
+
+.TK-PRGS-Logo {
+    display: block;
+    outline: none!important;
+    text-decoration: none!important;
+    transition: color .1s linear, background .1s linear, opacity .1s linear;
+}
+
+.TK-PRGS-Logo:focus,
+.TK-PRGS-Logo:hover {
+    opacity: .75;
+}
+
+.TK-PRGS-Logo svg {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 880px) {
+    .TK-Hat-Brand {
+        width: 120px;
+        min-width: 120px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .TK-Hat-Brand {
+        width: 100px;
+        min-width: 100px;
+    }
+}
+
 
 /* Header */
 
 #page-header {
-    position: fixed;
-    top: 0;
     width: 100%;
-    font-size: 12px;
-    z-index: 100;
     height: 77px;
+    box-sizing: border-box;
+    font-size: 12px;
+    top: 41px;
+    left: 0;
+    z-index: 100;
+    position: fixed;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
@@ -145,7 +199,7 @@ em {
 
 #page-nav {
     position: fixed;
-    top: 79px;
+    top: 119px;
     bottom: 0;
     left: 0;
     width: 18%;
@@ -192,7 +246,7 @@ em {
     border-bottom: 1px solid #ebecee;
     position: fixed;
     background-color: #fff;
-    top: 79px;
+    top: 119px;
     z-index: 5;
     right: 0;
     font-size: 12px;
@@ -200,6 +254,12 @@ em {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+
+#markdown-toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 #markdown-toc>ul>li {
@@ -253,11 +313,6 @@ em {
 
 /* Article pages */
 
-#page-inner-content {
-    position: relative;
-    margin: 0;
-}
-
 #page-inner-content:after {
     content: " ";
     font-size: 0;
@@ -267,16 +322,14 @@ em {
 }
 
 #page-article {
-    background-color: #ffffff;
-    line-height: 1.5;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    padding-left: 18%;
-    padding-right: 2em;
+    margin: 0;
+    padding: 30px 2em 4em 18%;
     max-width: 100em;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-overflow-scrolling: touch;
 }
 
 #markdown-toc {
@@ -1236,8 +1289,9 @@ html {
 }
 
 #page-inner-content {
-    padding-top: 79px;
     box-sizing: border-box;
+    padding-top: 119px;
+    position: relative;
 }
 
 #page-article {
@@ -1379,7 +1433,7 @@ body {
 }
 
 .nav-buttons .btn {
-    padding: .667em 1.3em;
+    padding: 6px 19px;
 }
 
 .gsc-results-wrapper-nooverlay {
