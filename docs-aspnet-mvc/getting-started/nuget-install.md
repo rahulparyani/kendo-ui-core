@@ -71,6 +71,19 @@ The NuGet Feed provides the following packages related to UI for ASP.NET MVC:
 
 The [Kendo UI Packages](../../kendo-ui/intro/installation/nuget-install) are listed in a separate section.
 
+## Troubleshooting
+
+### Getting Error [Telerik Nuget] The V2 feed at '...' returned an unexpected status code '401 Logon failed.' After Changing Telerik Password
+
+After changing your Telerik password, you need to reset your credentials in the `NuGet.config` file. To do this, run the following command:
+
+###### Example
+
+```
+NuGet Sources Update -Name "telerik.com " -Source "https://nuget.telerik.com/nuget" ^
+      -UserName "your login email" -Password "your new password"
+``` 
+
 ## See Also
 
 * [Progress Telerik UI for ASP.NET MVC Fundamentals]({% slug fundamentals_aspnetmvc %})
