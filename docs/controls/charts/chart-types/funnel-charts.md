@@ -19,7 +19,7 @@ Kendo UI Funnel Charts are often used to represent stages in a sales process and
 
 The basic conceptual options of a Kendo UI Funnel Chart are:
 
-* `dynamicHeight`&mdah;It specifies whether the different elements should have equal height, when equal to `false`, or the height of each element should be based on its value.
+* `dynamicHeight`&mdash;It specifies whether the different elements should have equal height, when equal to `false`, or the height of each element should be based on its value.
 * `dynamicSlope`&mdash;When disabled, the `neckRatio` option is taken into account. When enabled, the `neckRatio` is neglected and each segment creates its form based on the ratio between the current value and the next value.
 * `neckRatio`&mdash;It specifies the ratio between the top and the bottom bases of the whole funnel series. For example, if set to `ten`, the top base will be ten times smaller than the bottom base, as demonstrated below.
 
